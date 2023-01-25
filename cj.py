@@ -6,7 +6,6 @@ from sys import argv, exit
 __author__ = 'c0ff33b34n'
 
 def check(url):
-    ''' check given URL is vulnerable or not '''
 
     try:
         if "http" not in url: url = "http://" + url
@@ -39,7 +38,6 @@ def create_poc(url):
 
 
 def main():
-    ''' Everything comes together '''
 
     try: sites = open(argv[1], 'r').readlines()
     except: print("[*] Usage: python(3) clickjacking_tester.py <file_name>"); exit(0)
